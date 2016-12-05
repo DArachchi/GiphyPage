@@ -1,0 +1,23 @@
+#buttonArea {
+	width: 100%;
+}
+
+footer {
+}
+
+#form {
+	margin-top: 20px;
+	position: relative;
+}
+
+.gifDiv {
+	float: left;
+	margin: 20px;
+}
+
+#gifView {
+}
+
+.topicButton {
+	margin: 5px 10px;
+}
