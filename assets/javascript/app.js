@@ -1,4 +1,4 @@
-var topics = ["House of Cards", "House MD", "Silicon Valley", "Top Gear" ,"The Walking Dead"];
+var topics = ["The Grand Tour", "House of Cards", "House MD", "Master of None", "Seinfeld", "Silicon Valley", "Top Gear"];
 
 
 $(document).ready(function(){
@@ -28,12 +28,14 @@ $(document).ready(function(){
 			$("#gifView").empty();
 			for(i=0; i < results.length; i++) {
 				var gifDiv = $("<div class='gifDiv'>");
-				var rating = $("<p>");
-				$(rating).text("Rating: " + results[i].rating);
+				var ratingDiv = $("<p class='rating'>");
+				var rating = results[i].rating;
+				rating = rating.toUpperCase();
+				$(ratingDiv).text("Rating: " + rating);
 				var gifImage = $("<img class='gifImage'>");
 				gifImage.attr("data-still", results[i].images.fixed_height_still.url).attr("data-animate", results[i].images.fixed_height.url).attr("data-state", "still");
 				gifImage.attr("src", gifImage.attr("data-still"));
-				$(gifDiv).append(rating).append(gifImage);
+				$(gifDiv).append(ratingDiv).append(gifImage);
 				$("#gifView").append(gifDiv);
 			}
 		})

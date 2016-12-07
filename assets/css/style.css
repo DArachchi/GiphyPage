@@ -1,13 +1,18 @@
+body {
+	background-color: #d3d3d3;
+}
+
 #buttonArea {
 	width: 100%;
 }
 
-footer {
-}
-
-#form {
+form {
 	margin-top: 20px;
 	position: relative;
+}
+
+#input:active {
+	border: red solid 2px;
 }
 
 .gifDiv {
@@ -18,6 +23,18 @@ footer {
 #gifView {
 }
 
+.rating {
+	background-color: #404040;
+	color: #ffffff;
+}
+
 .topicButton {
+	background-color: #000000;
+	color: #ffffff;
 	margin: 5px 10px;
+	padding: 5px;
+}
+
+.topicButton:hover {
+	border: red solid 2px;
 }
