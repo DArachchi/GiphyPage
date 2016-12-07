@@ -1,4 +1,4 @@
-var topics = ["The Grand Tour", "House of Cards", "House MD", "Master of None", "Seinfeld", "Silicon Valley", "Top Gear"];
+var topics = ["The Grand Tour", "House of Cards", "House MD", "Master of None", "Seinfeld", "Sesame Street", "Silicon Valley", "Top Gear"];
 
 
 $(document).ready(function(){
@@ -20,7 +20,7 @@ $(document).ready(function(){
 	});
 
 	$(document).on("click", ".topicButton", function() {
-		var topic =$(this).data("topic");
+		topic =$(this).data("topic");
 		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
 		$.ajax( { url:queryURL, method: "GET" }).done(function(response) {
 			console.log(response);

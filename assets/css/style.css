@@ -1,5 +1,6 @@
 body {
 	background-color: #d3d3d3;
+	font-family: arial;
 }
 
 #buttonArea {
@@ -7,12 +8,12 @@ body {
 }
 
 form {
+	margin-left: 20px;
 	margin-top: 20px;
-	position: relative;
 }
 
-#input:active {
-	border: red solid 2px;
+#input:focus {
+	border: #ff0000 solid 2px;
 }
 
 .gifDiv {
@@ -26,15 +27,23 @@ form {
 .rating {
 	background-color: #404040;
 	color: #ffffff;
+	padding: 5px;
+	text-align: center;
 }
 
 .topicButton {
 	background-color: #000000;
 	color: #ffffff;
-	margin: 5px 10px;
+	font-family: impact;
+	font-size: 16pt;
+	margin: 10px 0px 0px 20px;
 	padding: 5px;
 }
 
 .topicButton:hover {
-	border: red solid 2px;
+	border: #ff0000 solid 2px;
+}
+
+.topicButton:focus {
+	background-color: #ff0000;
 }
