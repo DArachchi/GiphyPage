@@ -4,8 +4,10 @@ var firstTime = true;
 
 $(document).ready(function(){
 
-	$("#gifView").html("<p class='instructions'>Press any pre-loaded button at the top to display gifs from that show or type in your own show!<br><br>Then, click a gif to start playing it and click it again to stop playing.</p>")
-	
+	function showInstructions() {
+		$("#gifView").html("<p class='instructions'>Press any pre-loaded button at the top to display gifs from that show or type in your own show!<br><br>Then, click a gif to start playing it and click it again to stop playing.</p>")		
+	}
+
 	function createButtons() {
 		$("#buttonArea").empty();
 		for(i=0; i < topics.length; i++) {
@@ -15,11 +17,16 @@ $(document).ready(function(){
 		}
 	};
 
+
 	$("#addButton").on("click", function(event) {
 		event.preventDefault();
 		var newTopic = $("#input").val().trim();
 		topics.push(newTopic);
 		createButtons();
+	});
+
+	$(".instructionsButton").on("click", function() {
+		showInstructions();
 	});
 
 	$(document).on("click", ".topicButton", function() {
@@ -60,4 +67,5 @@ $(document).ready(function(){
 	});
 
 	createButtons();
+	showInstructions();
 })

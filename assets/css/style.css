@@ -19,6 +19,16 @@ body {
 	font-family: arial;
 }
 
+button {
+	background-color: #000abd;
+	border: #ffffff solid 4px;
+	color: #ffffff;
+}
+
+button:hover {
+	border: #ff0000 solid 4px;
+}
+
 #buttonArea {
 	width: 100%;
 }
@@ -45,6 +55,13 @@ form {
 	border: #ff0000 solid 4px;
 }
 
+.gifDiv {
+	background-color: #000abd;
+	border: #000abd solid 4px;
+	float: left;
+	margin: 20px;
+}
+
 .instructions {
 	color: #000a83;
 	font-family: arial;
@@ -54,11 +71,9 @@ form {
 	text-align: center;
 }
 
-.gifDiv {
-	background-color: #000abd;
-	border: #000abd solid 4px;
-	float: left;
-	margin: 20px;
+.instructionsButton {
+	border: #000a83 solid 4px;
+	font-size: 18pt;
 }
 
 .rating {
@@ -69,9 +84,6 @@ form {
 }
 
 .topicButton {
-	background-color: #000abd;
-	border: #ffffff solid 4px;
-	color: #ffffff;
 	font-family: impact;
 	font-size: 18pt;
 	margin: 10px 0px 0px 20px;
