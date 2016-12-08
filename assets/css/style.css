@@ -1,5 +1,21 @@
+#addButton {
+	background-color: #000abd;
+	border: #000a83 solid 4px;
+	color: #ffffff;
+	font-family: arial;
+	font-size: 14pt;
+	height: 35px;
+	position: relative;
+	bottom: 1px;
+	width: 80px;
+}
+
+#addButton:hover {
+	border: #ff0000 solid 4px;
+}
+
 body {
-	background-color: #d3d3d3;
+	background-image: url("../images/background.jpg");
 	font-family: arial;
 }
 
@@ -8,40 +24,62 @@ body {
 }
 
 form {
+	color: #000a83;
+	font-size: 20pt;
+	font-weight: bold;
 	margin-left: 20px;
 	margin-top: 20px;
 }
 
+#input {
+	border: #000a83 solid 4px;
+	font-family: arial;
+	font-size: 16pt;
+}
+
 #input:focus {
-	border: #ff0000 solid 2px;
+	border: #ff0000 solid 4px;
+}
+
+#input:hover {
+	border: #ff0000 solid 4px;
+}
+
+.instructions {
+	color: #000a83;
+	font-family: arial;
+	font-size: 30pt;
+	font-weight: bold;
+	margin: 100px;
+	text-align: center;
 }
 
 .gifDiv {
+	background-color: #000abd;
+	border: #000abd solid 4px;
 	float: left;
 	margin: 20px;
 }
 
-#gifView {
-}
-
 .rating {
-	background-color: #404040;
+	background-color: #000abd;
 	color: #ffffff;
 	padding: 5px;
 	text-align: center;
 }
 
 .topicButton {
-	background-color: #000000;
+	background-color: #000abd;
+	border: #ffffff solid 4px;
 	color: #ffffff;
 	font-family: impact;
-	font-size: 16pt;
+	font-size: 18pt;
 	margin: 10px 0px 0px 20px;
 	padding: 5px;
 }
 
 .topicButton:hover {
-	border: #ff0000 solid 2px;
+	border: #ff0000 solid 4px;
 }
 
 .topicButton:focus {

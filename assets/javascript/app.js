@@ -1,8 +1,11 @@
-var topics = ["The Grand Tour", "House of Cards", "House MD", "Master of None", "Seinfeld", "Sesame Street", "Silicon Valley", "Top Gear"];
+var topics = ["Big Bang Theory", "The Grand Tour", "House of Cards", "House MD", "Master of None", "Seinfeld", "Sesame Street", "Silicon Valley", "Top Gear"];
 
+var firstTime = true;
 
 $(document).ready(function(){
 
+	$("#gifView").html("<p class='instructions'>Press any pre-loaded button at the top to display gifs from that show or type in your own show!<br><br>Then, click a gif to start playing it and click it again to stop playing.</p>")
+	
 	function createButtons() {
 		$("#buttonArea").empty();
 		for(i=0; i < topics.length; i++) {
@@ -20,6 +23,11 @@ $(document).ready(function(){
 	});
 
 	$(document).on("click", ".topicButton", function() {
+		if (firstTime == true) {
+			$("#gifView").empty();
+		}
+		firstTime = false;
+
 		topic =$(this).data("topic");
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=10";
 		$.ajax( { url:queryURL, method: "GET" }).done(function(response) {
